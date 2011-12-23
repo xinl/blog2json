@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block subtitle %} - Settings{% endblock subtitle %}
+
+{% block main %}
+<form action="." method="post">
+	<div>Blogger ID: <input type="text" name="blogger_id" size="50" maxlength="500" value="{{ blogger_id|escape }}"></div>
+	<div>AWS3 Bucket Name: <input type="text" name="aws3_bucket_name" size="50" maxlength="500" value="{{ aws3_bucket_name|escape }}"></div>
+	<div>AWS3 Access Key: <input type="text" name="aws3_access_key" size="50" maxlength="500" value="{{ aws3_access_key|escape }}"></div>
+	<div>AWS3 Secret Key: <input type="text" name="aws3_secret_key" size="50" maxlength="500" value="{{ aws3_secret_key|escape }}"></div>
+	<div>Max Latest Entries: <input type="text" name="max_latest_result" size="5" maxlength="5" value="{{ max_latest_result|escape }}"></div>
+	<div>Max Collection Entries: <input type="text" name="max_collection_result" size="5" maxlength="5" value="{{ max_collection_result|escape }}"></div>
+	<div>Collection List:<br>
+		<textarea name="collection_list" rows="20" cols="80">{{ collection_list|escape }}</textarea>
+	</div>
+	<div>
+		<input type="submit" name="save_settings" value="Save Settings">
+	</div>
+</form>
+{% endblock main %}

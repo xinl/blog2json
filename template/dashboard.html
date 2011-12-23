@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block subtitle %} - Settings{% endblock subtitle %}
+
+{% block main %}
+<div>Welcome!</div>
+<div>
+<form action="." method="post">
+		<input type="submit" name="update_latest" value="Update Latest Entries">
+		<input type="submit" name="update_collection" value="Update Collection">
+</form>
+</div>
+{% endblock main %}

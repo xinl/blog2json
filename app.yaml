@@ -1,0 +1,22 @@
+application: blog2json
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /
+  script: handler/dashboard.py
+  login: admin
+  secure: always
+  
+- url: /settings/
+  script: handler/settings.py
+  login: admin
+  secure: always
+
+- url: /static
+  static_dir: static
+  
+inbound_services:
+- mail
+
